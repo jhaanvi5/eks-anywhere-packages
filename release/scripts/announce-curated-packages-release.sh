@@ -40,7 +40,7 @@ EOF
 set_aws_config "production"
 
 # Get supported RELEASE_BRANCH
-local file_url="https://raw.githubusercontent.com/aws/eks-anywhere-build-tooling/main/release/SUPPORTED_RELEASE_BRANCHES"
+file_url="https://raw.githubusercontent.com/aws/eks-anywhere-build-tooling/main/release/SUPPORTED_RELEASE_BRANCHES"
 RELEASE_BRANCH=$(curl -s "$file_url" | grep -v '^[[:space:]]*$' | head -n 1)
 
 # Perform oras pull
